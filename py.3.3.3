@@ -1,0 +1,27 @@
+library charges a fine for every book returned after the due date.The rules for calculating the fine are as follows:
+For the first 5 days after the due date, the fine is 50 paise, for 6-10 days after the due date fine is 1 rupee and for above 10 days after the due date the fine is 5 rupees.
+If the book is returned after 30 days beyond the due date the membership will be cancelled.
+Write a program to accept the number of days the member is late to return the book and display the fine and/or the appropriate member cancellation message.
+
+
+
+def calculate_fine(days_late):
+   if days_late <= 0:
+      return "No fine is charged for returning the book on time."
+   elif days_late <= 5:
+      return f"The fine for returning the book {days_late} day(s) late is 50 paise."
+   elif days_late <= 10:
+      return f"The fine for returning the book {days_late} day(s) late is {(days_late - 5) * 0.5 + 0.5} rupees."
+   elif days_late <= 30:
+      return f"The fine for returning the book {days_late} day(s) late is {(days_late - 10) * 1 + 1} rupees."
+   else:
+      return "The membership has been cancelled due to returning the book more than 30 days late."
+
+
+days_late = int(input("Enter the number of days the member is late to return the book: "))
+
+print(calculate_fine(days_late))
+
+output:
+Enter the number of days the member is late to return the book: 10
+The fine for returning the book 10 day(s) late is 3.0 rupees.
