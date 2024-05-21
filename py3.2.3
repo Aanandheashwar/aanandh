@@ -1,0 +1,21 @@
+Given n time in hours, Write a program to find the time in minute at which the minute hand and hour hand coincide in next one hour.
+
+
+hours = int(input("Enter the current hours: "))
+minutes = int(input("Enter the current minutes: "))
+
+angle_hour = (hours % 12) * 30 + minutes * (360/60) / 12
+
+angle_minute = minutes * (360/60)
+
+
+diff = 30 * (hours % 12) + 30 - 3 * minutes
+
+minutes_to_coincide = (360 - diff) // 3
+
+print("The minute and hour hands will coincide at", minutes_to_coincide, "minutes past", hours % 12)
+
+output:
+Enter the current hours: 3
+Enter the current minutes: 45
+The minute and hour hands will coincide at 125 minutes past 3
