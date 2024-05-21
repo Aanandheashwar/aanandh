@@ -1,0 +1,24 @@
+Determine whether a rectangle can be formed by giving the four sides. Such 
+that length of its sides are a, b, c and d (in any order).
+
+a = float(input("Enter the length of the first side: "))
+b = float(input("Enter the length of the second side: "))
+c = float(input("Enter the length of the third side: "))
+d = float(input("Enter the length of the fourth side: "))
+
+
+sides = [a, b, c, d]
+sides.sort()
+
+
+if sides[0] == sides[2] and sides[1] == sides[3]:
+   print("The given sides can form a rectangle.")
+else:
+   print("The given sides cannot form a rectangle.")
+
+   output:
+Enter the length of the first side: 13
+Enter the length of the second side: 14
+Enter the length of the third side: 15
+Enter the length of the fourth side: 16
+The given sides cannot form a rectangle.
