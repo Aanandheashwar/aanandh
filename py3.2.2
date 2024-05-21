@@ -1,0 +1,23 @@
+Write a program to check whether the given three sides of a triangle are valid or not.
+
+
+a = float(input("Enter the length of the first side: "))
+b = float(input("Enter the length of the second side: "))
+c = float(input("Enter the length of the third side: "))
+
+
+max_side = max(a, b, c)
+
+
+if a + b > max_side and a + c > max_side and b + c > max_side:
+   print("The given sides can form a valid triangle.")
+else:
+   print("The given sides cannot form a valid triangle.")
+
+
+
+output:
+Enter the length of the first side: 17
+Enter the length of the second side: 13
+Enter the length of the third side: 15
+The given sides can form a valid triangle.
