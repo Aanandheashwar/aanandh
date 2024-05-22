@@ -1,0 +1,13 @@
+def find_nth_number(n, k):
+    count = 0
+    i = k + 1
+    while True:
+        if i % k == 0 or str(k)[0] in str(i):
+            count += 1
+            if count == n:
+                return i
+        i += 1
+
+n = 10
+k = 2
+print(find_nth_number(n, k))
