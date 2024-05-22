@@ -1,0 +1,14 @@
+write a python program to find all the integers between n and m (inclusive) that are divisible by 9, and calculate their sum.
+
+def find_divisible_by_9_and_sum(n, m):
+    divisible_by_9 = [i for i in range(n, m+1) if i % 9 == 0]
+    total_sum = sum(divisible_by_9)
+    
+    return divisible_by_9, total_sum
+n = int(input("Enter the value for n: "))
+m = int(input("Enter the value for m: "))
+
+divisible_numbers, total_sum = find_divisible_by_9_and_sum(n, m)
+
+print(f"Numbers divisible by 9 between {n} and {m}: {divisible_numbers}")
+print(f"Sum of these numbers: {total_sum}")
