@@ -1,0 +1,14 @@
+def find_nth_square_cube(n):
+    i = 1
+    count = 0
+    while True:
+        sq = i * i
+        cr = i ** 3
+        if sq == cr:
+            count += 1
+            if count == n:
+                return sq
+        i += 1
+
+n = 4
+print(find_nth_square_cube(n))
