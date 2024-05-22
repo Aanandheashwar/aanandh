@@ -1,0 +1,9 @@
+def print_numbers(a, b):
+    for i in range(a, b + 1):
+        print(i)
+
+if __name__ == '__main__':
+    start = 5
+    end = 15
+    print(f"Numbers between {start} and {end}:")
+    print_numbers(start, end)
