@@ -1,0 +1,15 @@
+def count_pos_neg_numbers():
+    n = int(input("Enter the value of n: "))
+    pos_count = 0
+    neg_count = 0
+    i = 1
+    while i <= n:
+        num = float(input("Enter number {}: ".format(i)))
+        if num > 0:
+            pos_count += 1
+        elif num < 0:
+            neg_count += 1
+        i += 1
+    print("Number of positive numbers: ", pos_count)
+    print("Number of negative numbers: ", neg_count)
+
